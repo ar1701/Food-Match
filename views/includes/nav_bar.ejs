@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md navbar-light bg-body-light border-bottom sticky-top">
+  <a class="navbar-brand" href="/listings"><i class="fa-solid fa-burger"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" href="/listings">Home</a>
+      <a class="nav-link" href="/listings">All Recipes</a>
+      <a class="nav-link" href="/listings/new">Add New Recipe</a>
+    </div>
+
+    <!-- Search bar -->
+    <form class="form-inline ml-auto" action="/search" method="post">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="foodName">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <div class="navbar-nav offset-1">
+      <% if(!currUser) {%>
+        <a class="nav-link" href="/signup">SignUp</a>
+        <a class="nav-link" href="/login">LogIn</a>
+      <% } %>
+
+      <% if(currUser) {%>
+        <a class="nav-link" href="/logout">LogOut</a>
+      <% } %>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,20 @@
+<% layout("./layouts/boilerplate.ejs") %>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-3">
+            <h3><%=item.title%></h3>
+        </div>
+    </div>
+    <div class="card col-6 offset-3 listing-card">
+        <div class="card-body">
+            <p class="card-text">
+                <p><b><u>Food Name:</u></b><%=item.title %></p>
+                <p><b><u>Food Ingredients:</u></b><br><i><%=item.ingredients %></i></p>
+                <p><b><u>How to Cook:</u></b><br><%=item.instructions %></p>
+                <p> <b><u>Servings:</u></b><%= item.servings%></p>
+            </p>
+        </div>
+    </div>
+
+  
+</body>
