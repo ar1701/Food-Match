@@ -33,7 +33,7 @@ module.exports.renderLogin = (req, res) => {
 };
 
 module.exports.loggedIn = async (req, res) => {
-    req.flash("success", "Welcome Back to WanderLust !");
+    req.flash("success", "Welcome Back to Food-Match !");
     let redirectUrl = res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl);
 };
